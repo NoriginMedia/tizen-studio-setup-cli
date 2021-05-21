@@ -1,2 +1,2 @@
-# tizen-Studio-setup-cli
+# tizen-studio-setup-cli
 This repo is for Tizen Studio IDE
