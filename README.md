@@ -11,7 +11,7 @@ This repo is for Tizen Studio IDE
 `chmod +x tizenSetupCli.sh`
 
 -Run the script by
-`./tizenSetupCli.sh.sh`
+`./tizenSetupCli.sh`
 
 ## About the Script
 The script has 3 option,
