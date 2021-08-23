@@ -6,12 +6,13 @@ This repo is for Tizen Studio IDE
 
 ## How to use?
 -Download or copy the script in some folder.
+`tizenSetupCli-Mac.sh` for Mac
 
 -Make the file executable by running:
-`chmod +x tizenSetupCli.sh`
+`chmod +x tizenSetupCli-Mac.sh`
 
 -Run the script by
-`./tizenSetupCli.sh`
+`./tizenSetupCli-Mac.sh`
 
 ## About the Script
 The script has 3 option,

@@ -44,44 +44,16 @@ installAditionalPackages() {
 }
 
 installTizenStudioIDE() {
-    printf "\n${DGREY}Select the OS type to begin the installation $NC\n"
-         PS3='Your choice? '
-         OPTIONS=("Mac" "Windows" "Exit")
-         select choice in "${OPTIONS[@]}"; do
-         case $choice in
-            "Mac")
-                printf "\n${DGREY}Installing latest version 4.1$NC\n"
-                curl http://download.tizen.org/sdk/Installer/tizen-studio_4.1/web-cli_Tizen_Studio_4.1_macos-64.bin? -O
-                chmod 700 *web-cli_Tizen_Studio_4.1_macos-64.bin*
-                ./web-cli_Tizen_Studio_4.1_macos-64.bin? --accept-license
+            printf "\n${DGREY}Installing latest version 4.1$NC\n"
+            curl http://download.tizen.org/sdk/Installer/tizen-studio_4.1/web-cli_Tizen_Studio_4.1_macos-64.bin? -O
+            chmod 700 *web-cli_Tizen_Studio_4.1_macos-64.bin*
+            ./web-cli_Tizen_Studio_4.1_macos-64.bin? --accept-license
 
-                #This function is called to installed some additional packages that are required for native app development
-                installAditionalPackages
+            #This function is called to installed some additional packages that are required for native app development
+            installAditionalPackages
 
-                printf "\n$GREEN ## Installation Done! Launching IDE... ## $NC\n"
-                open ~/tizen-studio/TizenStudio.app
-            break
-                ;;
-            
-            "Windows")
-              #TODO Windows version of the script
-                printf "\n${DGREY}Installing latest version 4.1$NC\n"
-                curl http://download.tizen.org/sdk/Installer/tizen-studio_4.1/web-cli_Tizen_Studio_4.1_windows-64.exe? -O
-              
-                #This function is called to installed some additional packages that are required for native app development
-                installAditionalPackages
-
-                printf "\n$GREEN ## Installation Done! Launching IDE... ## $NC\n"
-                open ~/tizen-studio/TizenStudio.app  #TODO fix the open command for windows 
-            break
-                ;;
-            
-            "Exit") 
-                confirm "Are you sure?" "Exiting..." exit
-                ;;
-            *) printf "\n$RED Invalid Option!!!$NC\n";;
-        esac
-        done
+            printf "\n$GREEN ## Installation Done! Launching IDE... ## $NC\n"
+            open ~/tizen-studio/TizenStudio.app
 }
 
 updateVersion() {
@@ -97,8 +69,9 @@ select choice in "${OPTIONS[@]}"; do
     case $choice in
         "Install")
         if [[ ! -z `ls ~ /usr | egrep '^tizen'` ]]
-           then  printf "\n${GREEN}Already installed, launching IDE $NC\n\n"
-           open ~/tizen-studio/TizenStudio.app
+        #    then  printf "\n${GREEN}Already installed, launching IDE $NC\n\n"
+        #    open ~/tizen-studio/TizenStudio.app
+           then installTizenStudioIDE
         else 
            installTizenStudioIDE
         fi
