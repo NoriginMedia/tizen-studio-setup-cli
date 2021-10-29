@@ -7,7 +7,7 @@ This repo is for Tizen Studio IDE
 ## Prerequisites for Windows
 -If you have lower than windows 10 pls install "- curl https://curl.se/windows/"
 
-## How to use in on Mac?
+## How to use it on Mac?
 -Download or copy the script in some folder.
 `tizenSetupCli-Mac.sh` 
 
