@@ -4,15 +4,24 @@ This repo is for Tizen Studio IDE
 ## Prerequisites
 -For Tizen Studio, you must install the Java Development Kit (JDK) version 8 or higher from [here](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html).
 
-## How to use?
+## Prerequisites for Windows
+-If you have lower than windows 10 pls install "- curl https://curl.se/windows/"
+
+## How to use in on Mac?
 -Download or copy the script in some folder.
-`tizenSetupCli-Mac.sh` for Mac
+`tizenSetupCli-Mac.sh` 
 
 -Make the file executable by running:
 `chmod +x tizenSetupCli-Mac.sh`
 
 -Run the script by
 `./tizenSetupCli-Mac.sh`
+
+## How to use it on Windows?
+-Download or copy the script in some folder.
+`tizenSetupCli.bat`
+
+-Run this script with administrator rights "Run as administrator" 
 
 ## About the Script
 The script has 3 option,
